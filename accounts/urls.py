@@ -3,7 +3,7 @@ from .views import *
 
 '''
 default views for jwt
-'''
+
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -15,4 +15,11 @@ urlpatterns = [
     path('user/', UserDetailView.as_view(), name='user-detail'),
 ]
 
-# '''
+'''
+
+
+urlpatterns = [
+    path('register/', RegisterAPI.as_view(), name='user-register'),
+    # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('user/', UserDetailView.as_view(), name='user-detail'),
+]
